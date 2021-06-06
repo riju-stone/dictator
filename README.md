@@ -11,7 +11,7 @@ This article helped me a lot. I hope this helps you too...
 - Add Mic and speaker support
 - Add Speech Recognition
 - A more responsive ui
-- Add Download option
+- Implement cloud storage
 
 ## Commands
 

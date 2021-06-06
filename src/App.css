@@ -1,0 +1,16 @@
+.app {
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.dark {
+  background-color: rgb(61, 61, 61);
+}
+
+.dark h1 {
+  color: rgb(216, 216, 216);
+}
+
+.dark h2 {
+  color: rgb(216, 216, 216);
+}

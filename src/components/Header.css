@@ -1,0 +1,29 @@
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.app-name {
+  color: rgb(70, 70, 70);
+}
+
+.theme-icon {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.theme-icon:hover {
+  animation: rotateIcon 2s linear infinite;
+}

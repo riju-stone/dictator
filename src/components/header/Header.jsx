@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Sun from '../assets/sun.png';
-import Moon from '../assets/moon.png';
+import Sun from 'D:/Projects/app_dev/React Framework/dictator/src/assets/sun.png';
+import Moon from 'D:/Projects/app_dev/React Framework/dictator/src/assets/moon.png';
 import './Header.css'
 
 

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# dictator
 
 A voice note app that listens to your mic or speaker and takes down everything it hears...
 

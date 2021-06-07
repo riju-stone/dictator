@@ -12,7 +12,8 @@ function createWindow(){
         resize: false,
         titleBarStyle: 'hidden',
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            worldSafeExecuteJavaScript: true
         }
     });
 

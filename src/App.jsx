@@ -47,8 +47,14 @@ function App() {
           } 
           handleAddNote={addNote} 
           handleDeleteNote={deleteNote}
-          handleDownloadNote={downloadNote}
-          />
+          handleDownloadNote={downloadNote}/>
+          <div className="app-credits">
+          <p>Made with &#128153; using 
+            <a href="https://reactjs.org/" rel="noreferrer" target="_blank"> React JS</a> and 
+            <a href="https://www.electronjs.org/" rel="noreferrer" target="_blank"> Electron JS</a>
+          </p>
+          <p>By <a href="https://github.com/riju-stone">Arighna Chakraborty</a></p>
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,7 @@
 .app {
-  height: 100vh;
+  height: 93.5vh;
   padding-top: 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .dark {
@@ -23,27 +21,6 @@
   color: rgb(216, 216, 216);
 }
 
-.app-credits {
-  margin-top: 30vh;
-}
-
 p {
   font-weight: 600;
-}
-
-.app-credits a {
-  text-decoration: none;
-  color: rgb(70, 70, 70);
-}
-
-.dark .app-credits a {
-  color: rgb(216, 216, 216);
-}
-
-.dark .app-credits a:hover {
-  color: aquamarine;
-}
-
-.app-credits a:hover {
-  color: rgb(0, 86, 216);
 }

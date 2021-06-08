@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="style.css">
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -12,6 +13,22 @@
     <title>React App</title>
   </head>
   <body>
+    <div id="title__bar" style="-webkit-app-region: drag">
+      <img id="logo" src="assets/app-icon.png" alt="Logo">
+      <button type="button" class="btn btn-outline-danger" id="cls"></button>
+      <button type="button" class="btn btn-outline-info" id="min"></button>
+      <b id="app__title">
+        <span>D</span>
+        <span>I</span>
+        <span>C</span>
+        <span>T</span>
+        <span>A</span>
+        <span>T</span>
+        <span>O</span>
+        <span>R</span>
+      </b>
+    </div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
     <div id="root"></div>
@@ -25,5 +42,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="script.js"></script>
   </body>
 </html>

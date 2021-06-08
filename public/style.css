@@ -1,0 +1,71 @@
+html {
+  --bg: white;
+  --min-logo: url("assets/min.png");
+  --cls-logo: url("assets/close.png");
+}
+
+#title__bar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: var(--bg);
+  -webkit-app-region: drag;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#min {
+  background-image: var(--min-logo);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 30px;
+  user-select: none;
+  float: right;
+  -webkit-app-region: no-drag;
+  -webkit-user-select: none;
+}
+
+#cls {
+  background-image: var(--cls-logo);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 30px;
+  float: right;
+  user-select: none;
+  -webkit-app-region: no-drag;
+  -webkit-user-select: none;
+}
+
+#logo {
+  float: left;
+  padding-top: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  -webkit-app-region: no-drag;
+}
+
+#app__title {
+  padding-left: 2px;
+  margin-bottom: 5px;
+  font-size: 2.7vh;
+  user-select: none;
+  color: rgb(70, 70, 70);
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}

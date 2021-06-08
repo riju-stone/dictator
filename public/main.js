@@ -10,10 +10,16 @@ function createWindow(){
         height: 800,
         width: 1000,
         resize: false,
+        frame: false,
         titleBarStyle: 'hidden',
+        icon: path.join(__dirname, '/assets/app-icon.png'),
         webPreferences: {
             nodeIntegration: true,
-            worldSafeExecuteJavaScript: true
+            worldSafeExecuteJavaScript: true,
+            webSecurity: true,
+            allowEval: false,
+            contextIsolation: false,
+            enableRemoteModule: true,
         }
     });
 

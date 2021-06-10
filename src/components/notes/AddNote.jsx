@@ -1,5 +1,5 @@
 import './Note.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const AddNote = ({ handleAddNote }) => {
     const [noteText, setNoteText] = useState('');

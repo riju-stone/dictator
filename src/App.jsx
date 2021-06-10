@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import NoteList from './components/notes/NotesList';
 import Search from './components/search/Search';
-import { nanoid } from 'nanoid';
-import { saveAs, encodeBase64 } from '@progress/kendo-file-saver';
+import {nanoid} from 'nanoid';
+import {saveAs, encodeBase64} from '@progress/kendo-file-saver';
 
-function App() {
+
+function App(){
   const [notes, setNotes] = useState([]);
 
   const addNote = (text) => {

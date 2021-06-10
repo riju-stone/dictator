@@ -1,4 +1,5 @@
 import './Note.css';
+import React from 'react';
 
 const Note = ({id, text, date, handleDeleteNote, handleDownloadNote}) => {
     return (

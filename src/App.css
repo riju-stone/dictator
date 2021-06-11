@@ -1,7 +1,37 @@
 .app {
+  display: flex;
+  flex-direction: row;
   height: 93.5vh;
   padding-top: 20px;
   text-align: center;
+}
+
+.app-menu {
+  position: fixed;
+  margin-top: 70px;
+  display: flex;
+  width: 90px;
+  height: 75vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 22px;
+  padding-right: 10px;
+  float: left;
+  border-right: 2px solid rgb(209, 209, 209);
+}
+
+.app-search {
+  margin-right: 20px;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 120px;
+  padding-right: 120px;
+  width: 95vw;
+  padding-right: 10px;
 }
 
 .dark {

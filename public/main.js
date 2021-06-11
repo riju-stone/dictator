@@ -9,7 +9,7 @@ function createWindow(){
     mainWindow = new BrowserWindow({
         height: 800,
         width: 1000,
-        resize: false,
+        resizable: false,
         frame: false,
         titleBarStyle: 'hidden',
         icon: path.join(__dirname, '/assets/app-icon.png'),

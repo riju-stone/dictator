@@ -1,6 +1,7 @@
 {
   "name": "dictator",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "author": "Arighna Chakraborty",
   "private": true,
   "dependencies": {
     "@progress/kendo-file-saver": "^1.1.0",
@@ -10,6 +11,7 @@
     "bootstrap": "^5.0.1",
     "cross-env": "^7.0.3",
     "electron-is-dev": "^2.0.0",
+    "jquery": "^3.6.0",
     "nanoid": "^3.1.23",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

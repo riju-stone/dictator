@@ -1,0 +1,79 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.wrapper button {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+.wrapper button svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #ffffff;
+  transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+}
+.wrapper button:hover {
+  transform: scale(1.1);
+}
+.wrapper button:focus {
+  box-shadow: 0 0 0 3px #00bbbb;
+}
+.wrapper .add {
+  z-index: 99;
+  height: 3rem;
+  background-color: rgb(57, 77, 95);
+  width: 3rem;
+  transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+}
+.wrapper .option {
+  position: relative;
+  top: -5rem;
+  opacity: 0;
+  margin-left: 6px;
+  transform: rotatez(-45deg);
+  transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+  pointer-events: none;
+}
+.wrapper-open .option {
+  opacity: 1;
+  top: 1rem;
+  transform: rotatez(0deg);
+  pointer-events: auto;
+}
+
+.wrapper-open .add svg {
+  transform: rotatez(135deg);
+}
+
+.option.one {
+  background-color: #e80c58;
+}
+
+.option.two {
+  background-color: #ff9600;
+}
+
+.option.three {
+  background-color: #506ad4;
+}
+
+.option.four {
+  background-color: #0ce8ba;
+}
+
+.option.five {
+  background-color: #b2ff0d;
+}
+
+.option.six {
+  background-color: #a3cdd9;
+}

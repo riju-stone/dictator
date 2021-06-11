@@ -4,6 +4,7 @@ import NoteList from './components/notes/NotesList';
 import Search from './components/search/Search';
 import {nanoid} from 'nanoid';
 import {saveAs, encodeBase64} from '@progress/kendo-file-saver';
+import AddNote from './components/add-note/AddNote';
 
 
 function App(){
@@ -36,15 +37,21 @@ function App(){
 
 
   return(
-      <div className="app container">
-        <Search handleSearch={setSearchText}/>
-        <NoteList 
-          notes={notes.filter((note)=>
-            note.text.toLowerCase().includes(searchText))
-          } 
-          handleAddNote={addNote} 
-          handleDeleteNote={deleteNote}
-          handleDownloadNote={downloadNote}/>
+      <div className="app">
+      <div className="app-menu">
+        <AddNote />
+      </div>
+      <div className="app-content">
+      <Search className="app-search" handleSearch={setSearchText}/>
+      <NoteList 
+        className="app-noteslist"
+        notes={notes.filter((note)=>
+          note.text.toLowerCase().includes(searchText))
+        } 
+        handleAddNote={addNote} 
+        handleDeleteNote={deleteNote}
+        handleDownloadNote={downloadNote}/>
+      </div>
       </div>
   );
 }

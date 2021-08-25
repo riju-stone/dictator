@@ -8,10 +8,10 @@ This article helped me a lot. I hope this helps you too -
 [Desktop App with React](https://www.section.io/engineering-education/desktop-application-with-react/)
 
 ## To Do
-- Add Mic and speaker support
+- Add Mic and Speaker Support
 - Add Speech Recognition
-- A more responsive ui
-- Implement cloud storage
+- A More Responsive UI
+- Implement Cloud Storage for Notes (Firebase or MongoDB)
 
 ## Commands
 

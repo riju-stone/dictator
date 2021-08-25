@@ -2,6 +2,8 @@
 
 A voice note app that listens to your mic or speaker and takes down everything it hears...
 
+![screenshot](record.gif)
+
 ## Integrating Electron with React
 
 This article helped me a lot. I hope this helps you too -

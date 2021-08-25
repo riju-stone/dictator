@@ -1,13 +1,14 @@
 .notes-list {
   margin-top: 80px;
+  margin-left: 100px;
   display: grid;
   grid-gap: 1rem;
   text-align: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .no-notes {
-  margin-top: 50%;
+  margin-top: 30vh;
   font-weight: 600;
   color: rgb(70, 70, 70);
 }

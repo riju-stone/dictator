@@ -9,15 +9,24 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
     "@tauri-apps/api": "^1.0.0-rc.6",
+    "dotenv": "^16.0.1",
+    "firebase": "^9.8.2",
+    "nanoid": "^3.3.4",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.0.0-rc.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24",
     "vite": "^2.9.9"
   }
 }

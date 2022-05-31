@@ -1,18 +1,39 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logoutInitiate } from "../redux/actions";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
+import { setUserLogOutState } from "../slices/userSlice";
+
+import {
+  currentUserName,
+  currentUserEmail,
+  currentUserImage,
+  setActiveUser,
+} from "../slices/userSlice";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { currentUser } = useSelector((state) => state.user);
+
+  const userName = useSelector(currentUserName);
+  const userEmail = useSelector(currentUserEmail);
+  const userImage = useSelector(currentUserImage);
 
   const handleLogout = () => {
-    if (currentUser) dispatch(logoutInitiate);
+    signOut(auth)
+      .then(() => {
+        dispatch(setUserLogOutState());
+      })
+      .catch((error) => {
+        dispatch(alert(error.message));
+      });
   };
 
   return (
     <div>
       <h1 className="">Home</h1>
+      <h2>Welcome {userName}</h2>
+      <h2>Welcome {userEmail}</h2>
+      <img src={userImage} />
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

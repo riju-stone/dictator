@@ -1,29 +1,50 @@
 import React, { useEffect } from "react";
-import { googleSignInInitate } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import {
+  currentUserName,
+  currentUserEmail,
+  currentUserImage,
+  setActiveUser,
+} from "../slices/userSlice";
+import { auth, provider } from "../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
-  const { currentUser } = useSelector((state) => ({ ...state.user }));
+  const userName = useSelector(currentUserName);
+  const userEmail = useSelector(currentUserEmail);
+  const userImage = useSelector(currentUserImage);
 
-  const handleGoogleSignIn = () => {
-    dispatch(googleSignInInitate());
+  const handleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        dispatch(
+          setActiveUser({
+            userName: result.user.displayName,
+            userEmail: result.user.email,
+            userImage: result.user.photoURL,
+          })
+        );
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   useEffect(() => {
-    if (currentUser) {
-      history("/");
+    if (userName) {
+      navigate("/");
     }
-  }, [currentUser, history]);
+  }, [userName, navigate]);
 
   return (
     <div>
       <div className="form">
         <div className="social-login">
-          <button className="" type="buttom" onClick={handleGoogleSignIn}>
+          <button className="" type="buttom" onClick={handleSignIn}>
             <span>Sign In with Google</span>
           </button>
         </div>

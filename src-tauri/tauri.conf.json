@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "tauri-app",
+    "productName": "dictator-app",
     "version": "0.1.0"
   },
   "tauri": {
@@ -58,8 +58,10 @@
         "fullscreen": false,
         "height": 800,
         "resizable": false,
-        "title": "Dictator",
-        "width": 1024
+        "title": "",
+        "width": 1024,
+        "theme": "Dark",
+        "decorations": false
       }
     ]
   }

@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "dictator-app",
+    "productName": "Dictator",
     "version": "0.1.0"
   },
   "tauri": {
@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.dictator.app",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -57,10 +57,9 @@
       {
         "fullscreen": false,
         "height": 800,
-        "resizable": false,
+        "resizable": true,
         "title": "",
         "width": 1024,
-        "theme": "Dark",
         "decorations": false
       }
     ]

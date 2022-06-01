@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
@@ -8,8 +8,10 @@ import {
   currentUserName,
   currentUserEmail,
   currentUserImage,
-  setActiveUser,
 } from "../slices/userSlice";
+import NoteList from "../components/NoteList";
+import Sidebar from "../components/Sidebar";
+import { currentTheme } from "../slices/themeSlice";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,23 +20,22 @@ const Home = () => {
   const userEmail = useSelector(currentUserEmail);
   const userImage = useSelector(currentUserImage);
 
+  const themeState = useSelector(currentTheme);
+
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
         dispatch(setUserLogOutState());
       })
       .catch((error) => {
-        dispatch(alert(error.message));
+        dispatch(console.log(error.message));
       });
   };
 
   return (
-    <div>
-      <h1 className="">Home</h1>
-      <h2>Welcome {userName}</h2>
-      <h2>Welcome {userEmail}</h2>
-      <img src={userImage} />
-      <button onClick={handleLogout}>Logout</button>
+    <div className="select-none flex flex-row justify-center">
+      <Sidebar />
+      <NoteList />
     </div>
   );
 };

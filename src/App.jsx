@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import { currentUserName } from "./slices/userSlice";
 
 function App() {
-  const userName = useSelector(currentUserName);
+  const userName =
+    useSelector(currentUserName) || localStorage.getItem("userName");
 
   return (
     <BrowserRouter>

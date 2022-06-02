@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Kobe";
+  src: url("./fonts/kobe11-regular.ttf");
+}

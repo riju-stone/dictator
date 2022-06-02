@@ -1,5 +1,4 @@
 {
-  "$schema": "..\\node_modules/@tauri-apps/cli\\schema.json",
   "build": {
     "beforeBuildCommand": "yarn build",
     "beforeDevCommand": "yarn dev",
@@ -12,7 +11,10 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "http": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
@@ -29,7 +31,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.dictator.app",
+      "identifier": "com.dictator.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -48,7 +50,7 @@
       }
     },
     "security": {
-      "csp": null
+      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     },
     "updater": {
       "active": false
@@ -58,7 +60,7 @@
         "fullscreen": false,
         "height": 800,
         "resizable": false,
-        "title": "",
+        "title": "Dictator",
         "width": 1024,
         "decorations": false
       }

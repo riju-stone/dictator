@@ -2,8 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { currentTheme } from "../slices/themeSlice";
 
-
-const NoteList = () => {
+const Notes = () => {
   const themeState = useSelector(currentTheme);
 
   return (
@@ -13,9 +12,8 @@ const NoteList = () => {
       }`}
     >
       NoteList
-     
     </div>
   );
 };
 
-export default NoteList;
+export default Notes;

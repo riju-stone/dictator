@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
 import { useSelector } from "react-redux";
 import { currentUserName } from "./slices/userSlice";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
+import Sidebar from "./components/Sidebar";
+import Titlebar from "./components/Titlebar";
+import Notes from "./pages/Notes";
+import Kanban from "./pages/Kanban";
 
 function App() {
   const userName = useSelector(currentUserName);
@@ -13,23 +16,40 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Titlebar />
         <Routes>
           <Route
             exact
             path="/"
             element={
-              userName ? (
-                <Suspense fallback={Loader}>
-                  <Home />
-                </Suspense>
+              userName !== null ? (
+                <div className="flex flex-row">
+                  <Sidebar />
+                  <Notes />
+                </div>
               ) : (
-                <Suspense fallback={Loader}>
-                  <Login />
-                </Suspense>
+                <Login />
               )
             }
           />
-          <Route path="/account" element={<Account />} />
+          <Route
+            path="/account"
+            element={
+              <div className="flex flex-row">
+                <Sidebar />
+                <Account />
+              </div>
+            }
+          />
+          <Route
+            path="/kanban"
+            element={
+              <div className="flex flex-row">
+                <Sidebar />
+                <Kanban />
+              </div>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>

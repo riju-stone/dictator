@@ -35,22 +35,30 @@ const Sidebar = () => {
     >
       <div className=" h-full mt-10 flex flex-col justify-between items-center align-top">
         <div className="flex flex-col">
-          <button
-            className={`h-8 w-8 text-white my-5 ${
-              themeState.theme === "dark" ? "text-[#ececec]" : "text-[#444444]"
-            }`}
-            onClick={handleLogout}
-          >
-            <DocumentAddIcon />
-          </button>
-          <button
-            className={`h-8 w-8 text-white my-5 ${
-              themeState.theme === "dark" ? "text-[#ececec]" : "text-[#444444]"
-            }`}
-            onClick={handleLogout}
-          >
-            <ClipboardCheckIcon />
-          </button>
+          <Link to="/">
+            <button
+              className={`h-8 w-8 text-white my-5 ${
+                themeState.theme === "dark"
+                  ? "text-[#ececec]"
+                  : "text-[#444444]"
+              }`}
+           
+            >
+              <DocumentAddIcon className="hover:scale-[1.2] transition ease-in"/>
+            </button>
+          </Link>
+          <Link to="/kanban">
+            <button
+              className={`h-8 w-8 text-white my-5 ${
+                themeState.theme === "dark"
+                  ? "text-[#ececec]"
+                  : "text-[#444444]"
+              }`}
+             
+            >
+              <ClipboardCheckIcon className="hover:scale-[1.2] transition ease-in"/>
+            </button>
+          </Link>
         </div>
 
         <div>
@@ -60,11 +68,11 @@ const Sidebar = () => {
             }`}
             onClick={handleLogout}
           >
-            <LogoutIcon />
+            <LogoutIcon className="hover:scale-[1.2] transition ease-in"/>
           </button>
           <Link to="/account">
             <img
-              className="h-9 w-9 rounded-full shadow-xl my-5"
+              className="h-9 w-9 rounded-full shadow-xl my-5 hover:scale-[1.2] transition ease-in"
               src={userImage || UserLogo}
               alt=""
             />

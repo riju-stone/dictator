@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { currentTheme } from "../slices/themeSlice";
 
-const Account = () => {
+const Kanban = () => {
   const themeState = useSelector(currentTheme);
   return (
     <div
@@ -10,9 +10,9 @@ const Account = () => {
         themeState.theme === "dark" ? "bg-[#08243d]" : " bg-slate-100"
       }`}
     >
-      Accounts
+      Kanban Board
     </div>
   );
 };
 
-export default Account;
+export default Kanban;

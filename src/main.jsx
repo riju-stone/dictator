@@ -5,6 +5,7 @@ import { store } from "./store";
 import { Provider } from "react-redux";
 import "./main.css";
 import Titlebar from "./components/Titlebar";
+import Sidebar from "./components/Sidebar";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

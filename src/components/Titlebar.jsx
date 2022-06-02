@@ -4,11 +4,11 @@ import Logo from "../assets/images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
 import { currentTheme, setTheme } from "../slices/themeSlice";
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
-import { MinusIcon, XIcon, ArrowsExpandIcon } from "@heroicons/react/outline";
+import { MinusIcon, XIcon } from "@heroicons/react/outline";
 
 const Titlebar = () => {
   const dispatch = useDispatch();
-  let themeState = useSelector(currentTheme);
+  const themeState = useSelector(currentTheme);
 
   useEffect(() => {
     document

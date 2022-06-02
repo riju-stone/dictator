@@ -29,9 +29,6 @@ const Login = () => {
             userImage: result.user.photoURL,
           })
         );
-
-        localStorage.setItem("userName", result.user.displayName);
-        localStorage.setItem("userEmail", result.user.email);
       })
       .catch((error) => {
         console.log(error.message);

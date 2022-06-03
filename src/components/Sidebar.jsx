@@ -8,7 +8,10 @@ import { setUserLogOutState } from "../slices/userSlice";
 import {
   LogoutIcon,
   ClipboardCheckIcon,
-  DocumentAddIcon,
+  PencilAltIcon,
+  CalendarIcon,
+  CogIcon,
+  BookOpenIcon,
 } from "@heroicons/react/outline";
 import UserLogo from "../assets/images/user.png";
 import { Link } from "react-router-dom";
@@ -37,42 +40,73 @@ const Sidebar = () => {
         <div className="flex flex-col">
           <Link to="/">
             <button
-              className={`h-8 w-8 text-white my-5 ${
+              className={`h-7 w-7 text-white my-3 ${
                 themeState.theme === "dark"
                   ? "text-[#ececec]"
                   : "text-[#444444]"
               }`}
-           
             >
-              <DocumentAddIcon className="hover:scale-[1.2] transition ease-in"/>
+              <PencilAltIcon className="hover:scale-[1.2] transition ease-in" />
             </button>
           </Link>
           <Link to="/kanban">
             <button
-              className={`h-8 w-8 text-white my-5 ${
+              className={`h-7 w-7 text-white my-3 ${
                 themeState.theme === "dark"
                   ? "text-[#ececec]"
                   : "text-[#444444]"
               }`}
-             
             >
-              <ClipboardCheckIcon className="hover:scale-[1.2] transition ease-in"/>
+              <ClipboardCheckIcon className="hover:scale-[1.2] transition ease-in" />
+            </button>
+          </Link>
+          <Link to="/journal">
+            <button
+              className={`h-7 w-7 text-white my-3 ${
+                themeState.theme === "dark"
+                  ? "text-[#ececec]"
+                  : "text-[#444444]"
+              }`}
+            >
+              <BookOpenIcon className="hover:scale-[1.2] transition ease-in" />
+            </button>
+          </Link>
+          <Link to="/calendar">
+            <button
+              className={`h-7 w-7 text-white my-3 ${
+                themeState.theme === "dark"
+                  ? "text-[#ececec]"
+                  : "text-[#444444]"
+              }`}
+            >
+              <CalendarIcon className="hover:scale-[1.2] transition ease-in" />
             </button>
           </Link>
         </div>
 
-        <div>
+        <div className="flex flex-col">
+          <Link to="/settings">
+            <button
+              className={`h-7 w-7 text-white my-3 ${
+                themeState.theme === "dark"
+                  ? "text-[#ececec]"
+                  : "text-[#444444]"
+              }`}
+            >
+              <CogIcon className="hover:scale-[1.2] transition ease-in" />
+            </button>
+          </Link>
           <button
-            className={`h-8 w-8 text-white my-5 ${
+            className={`h-7 w-7 text-white my-3 ${
               themeState.theme === "dark" ? "text-[#ececec]" : "text-[#444444]"
             }`}
             onClick={handleLogout}
           >
-            <LogoutIcon className="hover:scale-[1.2] transition ease-in"/>
+            <LogoutIcon className="hover:scale-[1.2] transition ease-in" />
           </button>
           <Link to="/account">
             <img
-              className="h-9 w-9 rounded-full shadow-xl my-5 hover:scale-[1.2] transition ease-in"
+              className="h-8 w-8 rounded-full shadow-xl my-3 hover:scale-[1.2] transition ease-in"
               src={userImage || UserLogo}
               alt=""
             />
